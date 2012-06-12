@@ -1,3 +1,4 @@
+#encoding utf-8
 source 'https://rubygems.org'
 
 gem 'rails', '3.2.3'
@@ -21,6 +22,10 @@ group :assets do
 end
 
 gem 'jquery-rails'
+
+
+#engine javascript
+gem 'therubyracer', require: 'v8'
 
 # To use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.0.0'
