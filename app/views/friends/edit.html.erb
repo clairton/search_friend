@@ -1,6 +1,6 @@
-<h1>Editing friend</h1>
+<h1><%="#{I18n.t(:editing)} #{I18n.t(:friends)}"%></h1>
 
 <%= render 'form' %>
 
-<%= link_to 'Show', @friend %> |
-<%= link_to 'Back', friends_path %>
+<%= link_to I18n.t(:show), @friend %> |
+<%= link_to I18n.t(:back), friends_path %>

@@ -1,20 +1,20 @@
 <p id="notice"><%= notice %></p>
 
 <p>
-  <b>Name:</b>
+  <b><%=I18n.t(:name)%>:</b>
   <%= @friend.name %>
 </p>
 
 <p>
-  <b>Latitude:</b>
+  <b><%=I18n.t(:latitude)%>:</b>
   <%= @friend.latitude %>
 </p>
 
 <p>
-  <b>Longitude:</b>
+  <b><%=I18n.t(:longitude)%>:</b>
   <%= @friend.longitude %>
 </p>
 
 
-<%= link_to 'Edit', edit_friend_path(@friend) %> |
-<%= link_to 'Back', friends_path %>
+<%= link_to I18n.t(:edit), edit_friend_path(@friend) %> |
+<%= link_to I18n.t(:back), friends_path %>
