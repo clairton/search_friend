@@ -5,6 +5,7 @@
     <th>Name</th>
     <th>Latitude</th>
     <th>Longitude</th>
+    <th>Amigos Próximos</th>    
     <th></th>
     <th></th>
     <th></th>
@@ -14,7 +15,11 @@
   <tr>
     <td><%= friend.name %></td>
     <td><%= friend.latitude %></td>
-    <td><%= friend.longitude %></td>
+    <td><%= friend.longitude%></td>
+    <% friend.calculates_near_him() %>
+    <% friend.near_him.each do |f|%>
+      <td><%= link_to f.name, f %></td>
+    <% end %>
     <td><%= link_to 'Show', friend %></td>
     <td><%= link_to 'Edit', edit_friend_path(friend) %></td>
     <td><%= link_to 'Destroy', friend, confirm: 'Are you sure?', method: :delete %></td>
